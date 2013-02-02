@@ -1,11 +1,11 @@
 Summary:	D-Bus interface for user accounts management
 Name:		accountsservice
-Version:	0.6.25
+Version:	0.6.30
 Release:	1
 License:	GPL v3
 Group:		Applications/System
 Source0:	http://cgit.freedesktop.org/accountsservice/snapshot/%{name}-%{version}.tar.xz
-# Source0-md5:	8438df64afffa3bd065c9c3134adb1e7
+# Source0-md5:	5138639710cc0b4a00764439f580f60c
 URL:		http://cgit.freedesktop.org/accountsservice/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -53,6 +53,7 @@ accountsservice includes, and more
 %build
 %{__intltoolize}
 %{__libtoolize}
+%{__gtkdocize}
 %{__aclocal}
 %{__autoconf}
 %{__autoheader}
