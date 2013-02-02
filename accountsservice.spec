@@ -1,7 +1,7 @@
 Summary:	D-Bus interface for user accounts management
 Name:		accountsservice
 Version:	0.6.30
-Release:	1
+Release:	2
 License:	GPL v3
 Group:		Applications/System
 Source0:	http://cgit.freedesktop.org/accountsservice/snapshot/%{name}-%{version}.tar.xz
@@ -83,7 +83,7 @@ rm -rf $RPM_BUILD_ROOT
 %systemd_preun accounts-daemon.service
 
 %postun
-%systemd_reload
+%systemd_postun
 
 %post	libs -p /usr/sbin/ldconfig
 %postun	libs -p /usr/sbin/ldconfig
