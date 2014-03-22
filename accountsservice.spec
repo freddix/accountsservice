@@ -1,11 +1,11 @@
 Summary:	D-Bus interface for user accounts management
 Name:		accountsservice
-Version:	0.6.34
+Version:	0.6.37
 Release:	1
 License:	GPL v3
 Group:		Applications/System
 Source0:	http://cgit.freedesktop.org/accountsservice/snapshot/%{name}-%{version}.tar.xz
-# Source0-md5:	4c37d9c9dca6275286565c194c88a265
+# Source0-md5:	d4842f2a054459746947f85476144077
 URL:		http://cgit.freedesktop.org/accountsservice/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -115,6 +115,8 @@ rm -rf $RPM_BUILD_ROOT
 %{_datadir}/dbus-1/interfaces/org.freedesktop.Accounts.User.xml
 %{_datadir}/dbus-1/interfaces/org.freedesktop.Accounts.xml
 %{_datadir}/gir-1.0/AccountsService-1.0.gir
+%if 0
 %{_datadir}/vala/vapi/accountsservice.deps
 %{_datadir}/vala/vapi/accountsservice.vapi
+%endif
 
