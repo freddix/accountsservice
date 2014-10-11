@@ -1,11 +1,11 @@
 Summary:	D-Bus interface for user accounts management
 Name:		accountsservice
-Version:	0.6.37
+Version:	0.6.38
 Release:	1
 License:	GPL v3
 Group:		Applications/System
 Source0:	http://cgit.freedesktop.org/accountsservice/snapshot/%{name}-%{version}.tar.xz
-# Source0-md5:	d4842f2a054459746947f85476144077
+# Source0-md5:	cd46e4d225717095cabe8b457ec944fa
 URL:		http://cgit.freedesktop.org/accountsservice/
 BuildRequires:	autoconf
 BuildRequires:	automake
@@ -70,6 +70,8 @@ rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
+
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/*.la
 
 %find_lang accounts-service
 
